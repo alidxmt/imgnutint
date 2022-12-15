@@ -6,55 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style/style.css">
-
-    <style>
-        .center {
-            margin: auto;
-            width: 660px;
-            border: 1px solid #baceabbd;
-            padding: 25px;
-            text-align: center;
-            border-radius: 25px;
-            /* background-image: url("app-img/bg.jpg"); */
-            background-color: rgb(244, 255, 240);
-            }
-        .btn{
-            width: 140px;
-            height: 30px;
-            display:none;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        table {
-        font-family: arial, sans-serif;
-        border-collapse: collapse;
-        width:620px;
-        display: none;
-        margin-left: auto;
-        margin-right: auto;
-
-        }
-
-        td, th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-        }
-
-        tr:nth-child(even) {
-        background-color: #ebe6b4;
-        }
-
-    </style>
 </head>
 <body>
 <!-- <h1 style='text-align: center'>F o o d y</h1> -->
-<img style="display:block;margin-left: auto;margin-right: auto;" src="app-img/foody-logo.png"/>
 
 <div class="center">
+<img style="display:block;margin-left: auto;margin-right: auto;" src="images/header.png" width="550"/>
+
+<br>
+<br>
+
+
 Please choose and upload your food image:
+
 <br><br>
-<input type="file" accept="image/*" onchange="loadFile(event)">
+<input id='imageinput' type="file" accept="image/*" onchange="loadFile(event)">
 <br><br>
 <img style="width: 260px;" id="output"/>
 <br><br>
@@ -74,35 +40,20 @@ Please choose and upload your food image:
     </tr>
     <tr>
       <td>Cheese</td>
-      <td>camembert</td>
       <td>100 g</td>
-      <td>300</td>
-      <td>24 g</td>
-      <td>15 g</td>
-      <td>59.00 mg</td>
-      <td>69.3 mg</td>
+      <td>12</td>
+      <td>3</td>
+      <td>2.4 g</td>
+      <td>.015 g</td>
+      <td>9.00 mg</td>
+      <td>6.3 mg</td>
     </tr>
 </table>
 </div>
 
 
 
-<script>
-  function get_nut_data(){
-    document.getElementById('cat-text').innerText ='Category of the food is: '+'cheese'
-    document.getElementById('nut-table').style.display='block'
-  }
-  var loadFile = function(event) {
-    document.getElementById('btn').style.display='block'
-    var output = document.getElementById('output');
-    output.src = URL.createObjectURL(event.target.files[0]);
-    output.onload = function() {
-      URL.revokeObjectURL(output.src) // free memory
-    }
-  };
- 
-
-<script src="script/scripts.js"></script>
+<script src="scripts/script.js"></script>
 
 </body>
 </html>
